@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-xxsx9z-g3jxjb+fopc#c=&s4n#nx&(-x9ee7*rmsk05ws9kegz'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -32,7 +32,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "54.169.102.189"
+    "52.74.129.55" # Elastic IP addresses
 ]
 
 
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'drf_yasg',
+    'rest_framework',
     'score_app',
 ]
 
@@ -139,3 +140,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+SWAGGER_SETTINGS = {
+   'USE_SESSION_AUTH': False,
+   'SECURITY_DEFINITIONS': None
+}

@@ -32,3 +32,27 @@ sudo docker stop <container-id>
 ```
 
 
+# Disable sudo for ec2-user
+### Run the following command to open the sudoers file in the vi editor:
+```
+sudo visudo
+```
+
+### Add the following line to the file to give the ec2-user passwordless sudo privileges:
+```
+ec2-user ALL=(ALL) NOPASSWD:ALL
+```
+
+# Got permission denied while trying to connect to the Docker daemon socket
+### Add the current user to the docker group:
+```
+sudo usermod -aG docker $USER
+```
+### Verify that the user is now part of the docker group:
+```
+groups $USER
+```
+### Ensure that the permissions on the Docker socket file are set correctly:
+```
+sudo chmod 666 /var/run/docker.sock
+```

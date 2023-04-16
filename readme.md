@@ -4,11 +4,11 @@
 
 1. a backend API endpoint called  get_score  with a simple dummy formula that could be anything e.g.  result = input + 1
 
-    - [get_score](http://54.169.102.189:8000/app/get_score?input=4)
+    - [get_score](http://52.74.129.55:8000/app/get_score?input=4)
 
 2. a PostgreSQL database that the backend API uses to log the user ID and the score
 
-    - [get_all_user](http://54.169.102.189:8000/app/user)
+    - [get_all_user](http://52.74.129.55:8000/app/user)
 
 3. demonstrate that the endpoint is behaving as expected (how do we test it? how can we prove that it is working as expected?)
 
@@ -18,14 +18,14 @@
         ```
 
 4. More
-    - [Api Documentation](http://54.169.102.189:8000/swagger)
+    - [Api Documentation](http://52.74.129.55:8000/swagger)
 
 # Task 2 Admin Panel
 ### Create a simple admin panel where operations staff can use to manage the database:
 
 1. a non engineer should be able to view the SQL tables, and search/make queries
 
-    - [Admin Page](http://54.169.102.189:8000/admin)
+    - [Admin Page](http://52.74.129.55:8000/admin)
 
     - Admin Site Developer Credentials
         ```
@@ -34,12 +34,12 @@
         ```
 
 2. even better if the staff can edit the entries too
-    - [Admin Page](http://54.169.102.189:8000/admin)
+    - [Admin Page](http://52.74.129.55:8000/admin)
 
     - Admin Site Superuser Credentials
         ```
-        Username: tojunhui
-        Password: Junhui8888
+        Username: admin@1
+        Password: 06JLLTQa6k@4
         ```
 
 
@@ -80,7 +80,7 @@ running fine
     - [docker.md](/docker.md)
 
 2. set up CI/CD pipelines or automated unit testing
-    - Pending
+    - [action.yml](.github/workflows/action.yml)
 
 3. host the app on serverless hosting on AWS e.g. container / cluster hosting services
     - [ec2.md](/ec2.md)

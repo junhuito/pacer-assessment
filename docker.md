@@ -16,3 +16,14 @@ docker tag pacer-test:latest public.ecr.aws/l6l3i2k4/pacer-test:latest
 ```
 docker push public.ecr.aws/l6l3i2k4/pacer-test:latest
 ```
+
+
+### Kill all running container
+```
+docker kill $(docker ps -q)
+```
+
+### Remove all docker image with none tag
+```
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+```

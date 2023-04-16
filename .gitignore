@@ -2,3 +2,6 @@
 *.pem
 
 Pacer - Backend Dev (Python Django) Challenge.pdf
+
+*.pyc
+.DS_Store

@@ -3,16 +3,10 @@
 FROM python:3.9
 
 RUN mkdir -p /app
-RUN mkdir -p /pacer-dev
-
-RUN pip install virtualenv
 
 COPY ./requirements.txt ./
-COPY ./pacer-dev ./pacer-dev
 COPY ./app ./app
 COPY ./.env ./.env
-
-RUN . pacer-dev/bin/activate
 
 RUN pip install -r requirements.txt
 
@@ -21,6 +15,8 @@ EXPOSE 8000
 WORKDIR /app
 
 RUN python manage.py collectstatic --noinput
+
+RUN python manage.py makemigrations
 
 RUN python manage.py migrate
 

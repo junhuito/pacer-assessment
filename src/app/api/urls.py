@@ -37,7 +37,7 @@ schema_view = get_schema_view(
 import score_app.views as scores
 import api.settings as settings
 
-from django.views.static import serve 
+from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
