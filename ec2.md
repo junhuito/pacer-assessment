@@ -22,7 +22,7 @@ sudo docker run --rm -d -p 8000:8000/tcp public.ecr.aws/l6l3i2k4/pacer-test:late
 
 
 # Stop a Docker Container
-### Step 1 Find the Running Container ID
+### Step 1: Find the Running Container ID
 ```
 sudo docker ps
 ```

@@ -67,7 +67,7 @@
 running fine
     - Run the test
         ```
-        python manage.py migrate
+        python manage.py test
         ```
     - All tests are past after altering the db schema
     ![Datbase summary](/assets/3.png)
